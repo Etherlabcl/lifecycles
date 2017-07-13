@@ -1,0 +1,15 @@
+<template name="App_body">
+  
+    {{> navbar}}
+      {{#if authInProcess}}
+        {{>loading}}
+      {{else}}
+        {{#if canShow}}
+          {{>Template.dynamic template=content}}
+        {{else}}
+          <br />
+          {{>login}}
+         {{/if}}
+      {{/if}}
+
+</template>
