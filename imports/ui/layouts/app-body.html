@@ -1,5 +1,5 @@
 <template name="App_body">
-  
+
     {{> navbar}}
       {{#if authInProcess}}
         {{>loading}}
@@ -11,5 +11,11 @@
           {{>login}}
          {{/if}}
       {{/if}}
-
+      <div class="ui inverted vertical footer segment sticky-footer">
+          <div class="ui center aligned container">
+            <div class="ui horizontal inverted small divided link list">
+              <a class="item" href="http://www.integralit.cl">Made with ❤ by Integral IT</a>
+            </div>
+          </div>
+        </div>
 </template>
