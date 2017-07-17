@@ -4,12 +4,7 @@
       {{#if authInProcess}}
         {{>loading}}
       {{else}}
-        {{#if canShow}}
           {{>Template.dynamic template=content}}
-        {{else}}
-          <br />
-          {{>login}}
-         {{/if}}
       {{/if}}
       <div class="ui inverted vertical footer segment sticky-footer">
           <div class="ui center aligned container">

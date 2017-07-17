@@ -12,7 +12,18 @@ FlowRouter.route('/', {
     BlazeLayout.render("App_body", {content: "login"});
   }
 });
-
+FlowRouter.route('/login', {
+  name: 'login',
+  action() {
+    BlazeLayout.render("App_body", {content: "login"});
+  }
+});
+FlowRouter.route('/registro', {
+  name: 'registro',
+  action() {
+    BlazeLayout.render("App_body", {content: "registro"});
+  }
+});
 FlowRouter.route('/history', {
   name: 'history',
   action() {
