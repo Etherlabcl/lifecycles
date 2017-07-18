@@ -34,7 +34,11 @@ Template.history.onCreated(function() {
 Template.history.helpers({
   createChart: function() {
     // Gather data:
-    var allStatus = DailyStatus.find();
+    var allStatus = DailyStatus.find({}, {
+      sort: {
+        createdAt: 1
+      }
+    });
     var valuesArray = [];
     var daysArray = [];
     allStatus.forEach(function(dailyStatus) {
