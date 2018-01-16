@@ -1,0 +1,71 @@
+<template name="public">
+
+      
+
+    <table class="ui structured   blue very padded table">
+     <tbody>
+     {{#each getGlobalIndicators}}
+        
+        <tr>
+          <td>Total Market Cap: <a class="ui blue basic label">USD ${{ formatCurrency this.total_market_cap_usd}}</a></td>
+          <td>Volumen 24H Mercado Global: <a class="ui blue basic label"> USD ${{formatCurrency this.total_24h_volume_usd}}</a> </td>
+          <td>Dominancia BTC: <a class="ui blue basic label"> {{formatCurrency this.bitcoin_percentage_of_market_cap}} %</a></td>
+        </tr>
+   
+      
+         <tr>
+          <td>Total Market Cap: <a class="ui teal basic label">CLP $ {{formatCurrency this.totalMktCapCLP}}</a> </td>
+          <td>
+            <div data-tooltip="Volumen SurBtc + CryptoMarket" data-position="left center">
+              Volumen 24H Mercado Chileno: <a class="ui teal basic  label">USD $  {{formatCurrency this.total_24h_volume_chile}}</a></div>
+          </td>
+          <td>Valor Dolar: <a class="ui teal basic  label">CLP $ {{formatCurrency this.usd_now}} </a></td>
+        </tr>
+         <tr>
+          <td></td>
+          <td><div data-tooltip="Volumen Mercado Global / Volumen Mercado Chileno" data-position="left center">% Volumen Mercado Chileno:  <a class="ui teal basic  label">{{toFixedFormat this.clp_percentage_of_market_cap}} %</a></div></td>
+          <td></td>
+        </tr>
+      {{/each}}   
+      </tbody>
+    </table>
+
+    <table class="ui structured celled green very padded table">
+      <thead>
+        <tr>
+          <th>Crypto</th>
+          <th><a href="https://www.surbtc.com" target="_blank">SurBtc.com</a></th>
+          <th><a href="https://www.cryptomkt.com" target="_blank">CryptoMkt.com</a></th>
+          <th><a href="https://www.coinmkarketcap.com" target="_blank">CoinMarketCap.com</a></th>
+          <th><a href="https://www.orionx.io" target="_blank">OrionX.io</a></th>
+          <th><a href="https://www.cajero.cl" target="_blank">Cajero.cl</a></th>
+        </tr>
+      </thead>
+      <tbody>
+           <tr>
+            <td>BTC</td>
+            <td class="positive" id="btc-surbtc">$ CLP {{formatCurrency getSurBtcBTC.last_price_clp}}</td>
+            <td class="negative" id="btc-cptmkt">No Disponible</td>
+            <td class="positive" id="btc-coinmkt">$ USD {{formatCurrency getCoinMktCapBTC.price_usd}} / $ CLP {{usdToClp getCoinMktCapBTC.price_usd}}</td>
+            <td class="negative" id="btc-orionx">No Disponible</td>
+            <td class="negative" id="btc-cajerocl">No Disponible</td>
+          </tr> 
+           <tr>
+            <td>ETH</td>
+            <td class="positive" id="eth-surbtc">$ CLP {{formatCurrency getSurBtcETH.last_price_clp}}</td>
+            <td class="positive" id="eth-cptmkt">$ CLP {{formatCurrency getCryptoMkt.last_price}}</td>
+            <td class="positive" id="eth-coinmkt">$ USD {{formatCurrency getCoinMktCapETH.price_usd}} / $ CLP {{usdToClp getCoinMktCapETH.price_usd}}</td>
+            <td class="negative" id="eth-orionx">No Disponible</td>
+            <td class="negative" id="eth-cajerocl">No Disponible</td>
+          </tr> 
+          <tr>
+            <td>LTC</td>
+            <td class="negative" id="ltc-surbtc">No Disponible</td>
+            <td class="negative" id="ltc-cptmkt">No Disponible</td>
+            <td class="negative" id="ltc-coinmkt">No Disponible</td>
+            <td class="negative" id="ltc-orionx">No Disponible</td>
+            <td class="negative" id="ltc-cajerocl">No Disponible</td>
+          </tr> 
+       </tbody>
+    </table>
+</template>

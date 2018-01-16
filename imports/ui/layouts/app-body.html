@@ -1,15 +1,12 @@
 <template name="App_body">
-
-    {{> navbar}}
-      {{#if authInProcess}}
-        {{>loading}}
-      {{else}}
-          {{>Template.dynamic template=content}}
-      {{/if}}
+      {{> navbar}}
+      <div class="main ui container">
+      {{>Template.dynamic template=content}}
+      </div>
       <div class="ui inverted vertical footer segment sticky-footer">
           <div class="ui center aligned container">
             <div class="ui horizontal inverted small divided link list">
-              <a class="item" href="http://www.integralit.cl">Made with ❤ by Integral IT</a>
+              <a class="item" href="https://bloqueaustral.cl">Made with ❤ by BloqueAuestral.cl</a>
             </div>
           </div>
         </div>
