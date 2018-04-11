@@ -1,9 +1,12 @@
 <template name="dailyStatus">
   <div class="ui centered grid" id="form2">
-    <div class="six wide tablet eight wide computer column ">
+    <div class=" column ">
       <div class="ui stacked secondary container form">
         <div class="field">
-          <h1> Message</h1>
+          <h2 class="ui center aligned icon header blue">
+            <i class="comment alternate red outline icon"></i>
+            Message?
+          </h2>
         </div>
         <div class="field" style="margin-top:1em">
           <textarea id="comment"></textarea>
@@ -15,10 +18,13 @@
     </div>
   </div>
   <div class="ui centered grid" id="form1">
-    <div class="six wide tablet eight wide computer column">
+    <div class="column">
       <div class="ui stacked secondary container">
         <div class="field">
-          <h1> How are you feeling today?</h1>
+          <h2 class="ui center aligned icon header blue">
+            <i class="heart red outline icon"></i>
+            How are you feeling today?
+          </h2>
         </div>
         <div class="field" style="margin-top:1em">
           <button class="ui fluid large blue inverted  submit button todayVal" value="3">OPTIMISTIC</button>
