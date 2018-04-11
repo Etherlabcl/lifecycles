@@ -1,13 +1,16 @@
 <template name="login">
+    
+        {{>loading}}
+    
     <div class="ui middle aligned center aligned grid">
-        <div class="column"  >
+        <div class="column">
             <h2 class="ui blue image header">
-              <div class="content">
-                LifeCycles
-              </div>
+                <div class="content ">
+                    LifeCycles
+                </div>
             </h2>
-            <form class="ui large form" >
-              <div class="ui stacked secondary container">
+            <form class="ui large form">
+                <div class="ui stacked secondary container">
                     <div class="field">
                         <div class="ui left icon input">
                             <i class="user icon"></i>
@@ -24,7 +27,7 @@
                         <div class="ui fluid large blue submit button" id="btnLogin">Ingresar</div>
                     </div>
                     <div class="field">
-                        <a href="/registro" class="ui fluid large submit button" >Registrar</a>
+                        <a href="/registro" class="ui fluid large submit button">Registrar</a>
                     </div>
 
                 </div>

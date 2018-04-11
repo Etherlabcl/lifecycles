@@ -16,7 +16,7 @@ Template.registro.events({
     e.preventDefault()
     var mail = t.find('#emailOrUsername').value;
     var password = t.find('#password').value;
-    if (validateEmail(mail) && password.length>0) {
+    if (validateEmail(mail) && password.length > 0) {
       var name = mail.match(/^([^@]*)@/)[1];
       var user = {
         name: name,
