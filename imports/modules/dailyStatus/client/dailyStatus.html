@@ -1,0 +1,54 @@
+<template name="dailyStatus">
+  <div class="ui centered grid" id="form2">
+    <div class="six wide tablet eight wide computer column ">
+      <div class="ui stacked secondary container form">
+        <div class="field">
+          <h1> Message</h1>
+        </div>
+        <div class="field" style="margin-top:1em">
+          <textarea id="comment"></textarea>
+        </div>
+        <div class="field">
+          <button class="ui fluid large blue inverted  submit button " id="to-history">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui centered grid" id="form1">
+    <div class="six wide tablet eight wide computer column">
+      <div class="ui stacked secondary container">
+        <div class="field">
+          <h1> How are you feeling today?</h1>
+        </div>
+        <div class="field" style="margin-top:1em">
+          <button class="ui fluid large blue inverted  submit button todayVal" value="3">OPTIMISTIC</button>
+        </div>
+        <br>
+        <div class="field">
+          <button class="ui fluid large blue inverted  submit button todayVal" value="2">HAPPY</button>
+        </div>
+        <br>
+        <div class="field">
+          <button class="ui fluid large blue inverted  submit button todayVal" value="1">PLEASANT FEELING</button>
+        </div>
+        <br>
+        <div class="field">
+          <button class="ui fluid large blue inverted  submit button todayVal" value="0">NEUTRAL</button>
+        </div>
+        <br>
+        <div class="field">
+          <button class="ui fluid large blue inverted  submit button todayVal" value="-1">UNPLEASANT FEELINGS</button>
+        </div>
+        <br>
+        <div class="field">
+          <button class="ui fluid large blue inverted  submit button todayVal" value="-2">DISPLEASED, SAD</button>
+        </div>
+        <br>
+        <div class="field">
+          <button class="ui fluid large blue inverted  submit button todayVal" value="-3">FEARFULL, DEPRESSED</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>

@@ -1,0 +1,35 @@
+<template name="login">
+    <div class="ui middle aligned center aligned grid">
+        <div class="column"  >
+            <h2 class="ui blue image header">
+              <div class="content">
+                LifeCycles
+              </div>
+            </h2>
+            <form class="ui large form" >
+              <div class="ui stacked secondary container">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="email" id="emailOrUsername" placeholder="Usuario">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" id="password" placeholder="Clave">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui fluid large blue submit button" id="btnLogin">Ingresar</div>
+                    </div>
+                    <div class="field">
+                        <a href="/registro" class="ui fluid large submit button" >Registrar</a>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</template>

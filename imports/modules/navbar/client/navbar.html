@@ -1,7 +1,23 @@
 <template name="navbar">
-  <div class="ui three item menu">
-  <a class="item"></a>
-  <a href="/" class="item active">Mercado Cripto.cl v.Alpha</a>
-  <a class="item"></a>
-</div>
+  <div class="ui menu">
+    {{#if currentUser}}
+    <div class="left menu">
+      <a class="ui simple dropdown item">
+        Menu
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="/dailyStatus">Daily Status</a>
+          <a class="item" href="/history">History</a>
+        </div>
+      </a>
+    </div>
+    <div class="right menu">
+
+      <a class="item" id="logout">
+        <i class="sign out icon"></i>
+        Salir
+      </a>
+    </div>
+    {{/if}}
+  </div>
 </template>

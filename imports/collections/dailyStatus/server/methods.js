@@ -3,11 +3,11 @@ import {_} from 'meteor/underscore';
 import {ValidatedMethod} from 'meteor/mdg:validated-method';
 import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
-import {GlobalIndicator} from '/imports/collections/globalIndicators/globalIndicators.js';
+import {DailyStatus} from '/imports/collections/dailyStatus/dailyStatus.js';
 
 Meteor.methods({
-  globalIndicatorInsert: function(dataObject) {
-    let id = GlobalIndicator.insert(dataObject);
+  dailyStatusInsert: function(dataObject) {
+    let id = DailyStatus.insert(dataObject);
     return {ok: true}
   }
 });

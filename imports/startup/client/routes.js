@@ -7,9 +7,33 @@ import '../../ui/layouts/app-body.js';
 import '../../ui/pages/app-not-found.js';
 
 FlowRouter.route('/', {
-  name: 'public',
+  name: 'index',
   action() {
-    console.log("en publiiiiicccc")
-    BlazeLayout.render("App_body", {content: "public"});
+    BlazeLayout.render("App_body", {content: "login"});
+  }
+});
+FlowRouter.route('/login', {
+  name: 'login',
+  action() {
+    BlazeLayout.render("App_body", {content: "login"});
+  }
+});
+FlowRouter.route('/registro', {
+  name: 'registro',
+  action() {
+    BlazeLayout.render("App_body", {content: "registro"});
+  }
+});
+FlowRouter.route('/history', {
+  name: 'history',
+  action() {
+    BlazeLayout.render("App_body", {content: "history"});
+  }
+});
+
+FlowRouter.route('/dailyStatus', {
+  name: 'dailyStatus',
+  action() {
+    BlazeLayout.render("App_body", {content: "dailyStatus"});
   }
 });
